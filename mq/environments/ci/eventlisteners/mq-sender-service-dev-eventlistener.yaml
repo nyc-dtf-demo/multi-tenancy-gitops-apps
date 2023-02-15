@@ -1,0 +1,10 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: mq-sender-service-post-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - name: mq-sender-service-post-dev
+      template:
+        ref: mq-sender-service-post-dev

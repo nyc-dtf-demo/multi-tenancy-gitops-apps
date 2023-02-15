@@ -28,7 +28,7 @@ spec:
       default: "true"
     - name: test-plan
       description: Path of the postman collection
-      default: "jmeter/mq-spring-app.jmx"
+      default: "jmeter/mq-sender-service.jmx"
   tasks:
     - name: mq-stage-instance-tests
       taskRef:

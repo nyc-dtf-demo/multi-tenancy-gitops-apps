@@ -35,6 +35,6 @@ spec:
           - --param
           - git-pr=true
           - --param
-          - test-plan="jmeter/mq-spring-app.jmx"
+          - test-plan="jmeter/mq-sender-service.jmx"
       restartPolicy: Never
   backoffLimit: 0

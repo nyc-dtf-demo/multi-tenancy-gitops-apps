@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: trigger-dev-stage-promotion-pipeline-for-qmgr
+  name: trigger-stage-prod-promotion-pipeline-for-app
   namespace: ci
   annotations:
     argocd.argoproj.io/hook: PostSync
@@ -21,9 +21,9 @@ spec:
           - start
           - ibm-mq-promote-dev-stage
           - --param
-          - git-url=https://github.com/${GIT_ORG}/mq-qm01.git
+          - git-url=https://github.com/${GIT_ORG}/mq-sender-service.git
           - --param
-          - git-revision=${GIT_BRANCH_QM1}
+          - git-revision=${GIT_BRANCH_SPRING}
           - --param
           - src-environment=dev
           - --param
