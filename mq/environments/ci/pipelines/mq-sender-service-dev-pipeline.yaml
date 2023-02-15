@@ -56,8 +56,7 @@ spec:
       taskRef:
         name: ibm-build-tag-push-v2-6-13
       runAfter:
-        #- test
-        -setup
+        - setup
       params:
         - name: git-url
           value: "$(tasks.setup.results.git-url)"
